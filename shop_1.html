@@ -19,8 +19,8 @@
         padding: 0.5em 1em;
         text-decoration: none;
         background: #f7f7f7;
-        border-left: solid 6px #ff7c5c;
-        color: #ff7c5c;
+        border-left: solid 6px #833A09;
+        color: #833A09;
         font-weight: bold;
         box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
       }
@@ -303,15 +303,6 @@
           <p>地図</p>
           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3243.3040476860715!2d139.65080866525707!3d35.62023028020865!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018f4f4fdd1695b%3A0x17e3df013fe9d641!2z44CSMTU4LTAwODEg5p2x5Lqs6YO95LiW55Sw6LC35Yy65rex5rKi77yV5LiB55uu77yW4oiS77yR77yWIOOCsOODquODvOODs-ODj-OCpOODhOa3seayog!5e0!3m2!1sja!2sjp!4v1449475426020" width="100%" height="400" frameborder="0" style="border:0;pointer-events:none;" allowfullscreen=""></iframe>
         </div>
-
-
-
-        <!-- <div class="posts-show-item">
-          <p>東京夜市</p>
-        </div>
-        <div class="posts-show-item">
-          <img src="./pictures/tokyo_yoichi.png" alt="yoichi">
-        </div> -->
       </div>
     </div>
   </body>
@@ -322,12 +313,13 @@
     const Img = document.getElementById("profile_img");
 
     function shareFriends() {
-
       if (liff.isApiAvailable('shareTargetPicker')){
+        const myLink = liff.permanentLink.createUrl()
+        console.log('myLink', myLink);
         liff.shareTargetPicker(
           [{
             type: 'text',
-            text: 'https://liff.line.me/1654261210-n9Rg63eM'
+            text: '見てほしい！' + myLink
           }]
         ).then(function() {
           // window.alert('シェアしました');

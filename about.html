@@ -19,8 +19,8 @@
         padding: 0.5em 1em;
         text-decoration: none;
         background: #f7f7f7;
-        border-left: solid 6px #ff7c5c;
-        color: #ff7c5c;
+        border-left: solid 6px #833A09;
+        color: #833A09;
         font-weight: bold;
         box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
       }
@@ -314,12 +314,13 @@
     const Img = document.getElementById("profile_img");
 
     function shareFriends() {
-
       if (liff.isApiAvailable('shareTargetPicker')){
+        const myLink = liff.permanentLink.createUrl()
+        console.log('myLink', myLink);
         liff.shareTargetPicker(
           [{
             type: 'text',
-            text: 'https://liff.line.me/1654261210-n9Rg63eM'
+            text: '見てほしい！' + myLink
           }]
         ).then(function() {
           // window.alert('シェアしました');
