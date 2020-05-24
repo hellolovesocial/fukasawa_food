@@ -285,6 +285,9 @@
       </div>
       <ul class="header-menus">
         <li>
+          <button class="btn" id="shareFriends">友だちにシェア</button></br>
+        </li>
+        <li>
           <a href="about.html">Fappとは</a>
         </li>
         <li>
@@ -297,8 +300,7 @@
     </header>
     <div class="main top-main">
       <div class="top-message">
-        <p id="profile_name"></p>
-        <button class="btn" id="shareFriends">友だちにシェア</button></br>
+        <p id="profile_name"> さん</p>
         <h2>FAppで、地元はつながる</h2>
         <p>いまこそ地元のお店を応援しよう！</p>
       </div>
@@ -311,6 +313,7 @@
     const Img = document.getElementById("profile_img");
 
     function shareFriends() {
+
       if (liff.isApiAvailable('shareTargetPicker')){
         liff.shareTargetPicker(
           [{
