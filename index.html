@@ -2,14 +2,13 @@
 <html lang="ja">
   <head>
     <title>F-app</title>
-    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta property="og:title" content="F-app">
-    <meta property="og:type" content="website">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
+    <!-- <meta property="og:title" content="F-app"> -->
+    <!-- <meta property="og:type" content="website"> -->
     <meta property="og:description" content="FukasawaのためのFoodサイト">
-    <meta property="og:url" content="https://liff.line.me/1654261210-n9Rg63eM">
+    <!-- <meta property="og:url" content="https://liff.line.me/1654261210-n9Rg63eM"> -->
     <meta property="og:site_name" content="F-app">
-    <meta property="og:image" content="https://file12-d.kuku.lu/files/20200524-1526_25262fa7aabd36a73f30a79b5fb4037d.png"> -->
-    <!-- <link rel="stylesheet" type="text/css" href="style.scss"> -->
+    <meta property="og:image" content="https://file12-d.kuku.lu/files/20200524-1526_25262fa7aabd36a73f30a79b5fb4037d.png">
     <style>
       /* reset ================================ */
 
@@ -26,6 +25,12 @@
       .btn:active {
         box-shadow: inset 0 0 2px rgba(128, 128, 128, 0.1);
         transform: translateY(2px);
+      }
+
+      .profile {
+        border-radius: 50%;
+        width: 64px;
+        height: 64px;
       }
       
       * {
@@ -285,10 +290,14 @@
         <li>
           <a href="shops.html">お店一覧</a>
         </li>
+        <li>
+          <img id="profile_img" class="profile" src=""/>
+        </li>
       </ul>
     </header>
     <div class="main top-main">
       <div class="top-message">
+        <p id="profile_name"></p>
         <button class="btn" id="shareFriends">友だちにシェア</button></br>
         <h2>FAppで、地元はつながる</h2>
         <p>いまこそ地元のお店を応援しよう！</p>
@@ -298,6 +307,8 @@
   <script>
     // My LIFF ID
     const liffId = "1654261210-n9Rg63eM"
+    const Name = document.getElementById('profile_name');
+    const Img = document.getElementById("profile_img");
 
     function shareFriends() {
       if (liff.isApiAvailable('shareTargetPicker')){
