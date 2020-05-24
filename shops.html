@@ -298,6 +298,8 @@
     function shareFriends() {
 
       if (liff.isApiAvailable('shareTargetPicker')){
+        const myLink = liff.permanentLink.createUrl()
+        console.log('myLink', myLink);
         liff.shareTargetPicker(
           [{
             type: 'text',
