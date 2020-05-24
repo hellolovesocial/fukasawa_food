@@ -33,7 +33,7 @@
       a {
         text-decoration: none;
         color: #2d3133;
-        font-size: 14px;
+        font-size: 24px;
       }
 
       h1, h2, h3, h4, h5, h6, p {
@@ -60,7 +60,7 @@
 
       .main {
         position: absolute;
-        top: 64px;
+        top: 120px;
         width: 100%;
         height: auto;
         min-height: 100%;
@@ -68,7 +68,7 @@
       }
 
       .container {
-        max-width: 600px;
+        max-width: 80%;
         margin: 60px auto;
         padding-left: 15px;
         padding-right: 15px;
@@ -77,7 +77,7 @@
 
       /* ヘッダー ================================ */
       header {
-        height: 64px;
+        height:120px;
         position: absolute;
         z-index: 1;
         width: 100%;
@@ -85,20 +85,23 @@
 
       .header-logo {
         float: left;
-        padding-left: 20px;
+        padding-left: 80px;
+        padding-top: 30px;
         color: white;
         font-size: 22px;
         line-height: 64px;
+        font-weight: 600; 
       }
 
       .header-logo a{
         color: white;
-        font-size: 22px;
+        font-size: 32px;
       }
 
       .header-menus {
         float: right;
-        padding-right: 20px;
+        padding-right: 80px;
+        padding-top: 30px;
       }
 
       .header-menus li {
@@ -106,12 +109,12 @@
         line-height: 64px;
         font-size: 13px;
         color: white;
-        padding-left: 15px;
+        padding-left: 24px;
       }
 
       .header-menus a {
         float: left;
-        font-size: 13px;
+        font-size: 24px;
         color: white;
       }
 
@@ -177,6 +180,7 @@
 
       .posts-show-item img {
         width: 80%;
+        /* border-radius: 40%; */
         box-shadow: 0 2px 6px #c1ced7;
         vertical-align: middle;
         object-fit: cover;
@@ -189,8 +193,14 @@
       }
 
       .posts-show-item p {
-        font-size: 24px;
+        font-size: 32px;
         margin: 20px 0;
+      }
+
+      .posts-show-item-title {
+        font-size: 32px;
+        margin: 40px 0;
+        font-weight: 600;
       }
 
       .post-time {
@@ -241,12 +251,40 @@
     </header>
     <div class="main posts-show">
       <div class="container">
+        <div class="posts-show-item-title">
+          <p>東京夜市</p>
+        </div>
         <div class="posts-show-item">
+          <p>チラシ</p>
+          <img src="./pictures/tokyo_yoichi.png" alt="yoichi">
+        </div>
+        <div class="posts-show-item">
+          <p>ウェブサイト</p>
+          <a href='https://tokyo-yoichi.com/'>https://tokyo-yoichi.com/</a>
+        </div>
+        <div class="posts-show-item">
+          <p>電話</p>
+          <a href="tel:0364116873">03-6411-6873</a>
+        </div>
+        <div class="posts-show-item">
+          <p>営業時間</p>
+          <p style="font-size: 24px;">ランチ：11:30-13:00 店内</p>
+          <p style="font-size: 24px;">ディナー：テイクアウトのみ</p>
+          <p style="font-size: 24px;">定休日：月曜 (月曜が休日の場合は翌火曜, 不定休あり)</p>
+        </div>
+        <div class="posts-show-item">
+          <p>地図</p>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3243.3040476860715!2d139.65080866525707!3d35.62023028020865!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018f4f4fdd1695b%3A0x17e3df013fe9d641!2z44CSMTU4LTAwODEg5p2x5Lqs6YO95LiW55Sw6LC35Yy65rex5rKi77yV5LiB55uu77yW4oiS77yR77yWIOOCsOODquODvOODs-ODj-OCpOODhOa3seayog!5e0!3m2!1sja!2sjp!4v1449475426020" width="100%" height="400" frameborder="0" style="border:0;pointer-events:none;" allowfullscreen=""></iframe>
+        </div>
+
+
+
+        <!-- <div class="posts-show-item">
           <p>東京夜市</p>
         </div>
         <div class="posts-show-item">
           <img src="./pictures/tokyo_yoichi.png" alt="yoichi">
-        </div>
+        </div> -->
       </div>
     </div>
   </body>
