@@ -333,6 +333,8 @@
             const pic = profile.pictureUrl;
             console.log('name', name);
             console.log('pic', pic);
+            Name.innerHTML = name;
+            Img.src = pic;
           })
           .catch((err) => {
             console.log('error', err);
