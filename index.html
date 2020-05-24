@@ -2,13 +2,13 @@
 <html lang="ja">
   <head>
     <title>F-app</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta property="og:title" content="F-app">
     <meta property="og:type" content="website">
     <meta property="og:description" content="FukasawaのためのFoodサイト">
     <meta property="og:url" content="https://liff.line.me/1654261210-n9Rg63eM">
     <meta property="og:site_name" content="F-app">
-    <meta property="og:image" content="https://file12-d.kuku.lu/files/20200524-1526_25262fa7aabd36a73f30a79b5fb4037d.png">
+    <meta property="og:image" content="https://file12-d.kuku.lu/files/20200524-1526_25262fa7aabd36a73f30a79b5fb4037d.png"> -->
     <!-- <link rel="stylesheet" type="text/css" href="style.scss"> -->
     <style>
       /* reset ================================ */
@@ -316,16 +316,16 @@
 
     liff.init({liffId}).then(() => {
       if (liff.isLoggedIn()) {
-        // liff.getProfile()
-        //   .then(profile => {
-        //     const name = profile.displayName;
-        //     const pic = profile.pictureUrl;
-        //     console.log('name', name);
-        //     console.log('pic', pic);
-        //   })
-        //   .catch((err) => {
-        //     console.log('error', err);
-        //   });
+        liff.getProfile()
+          .then(profile => {
+            const name = profile.displayName;
+            const pic = profile.pictureUrl;
+            console.log('name', name);
+            console.log('pic', pic);
+          })
+          .catch((err) => {
+            console.log('error', err);
+          });
       }
       else{
         liff.login();
