@@ -271,9 +271,9 @@
         <li>
           <a href="shops.html">お店一覧</a>
         </li>
-        <li>
+        <!-- <li>
           <img id="profile_img" class="profile" src=""/>
-        </li>
+        </li> -->
       </ul>
     </header>
     <div class="main posts-show">
@@ -308,8 +308,8 @@
   <script>
     // My LIFF ID
     const liffId = "1654261210-n9Rg63eM"
-    const Name = document.getElementById('profile_name');
-    const Img = document.getElementById("profile_img");
+    // const Name = document.getElementById('profile_name');
+    // const Img = document.getElementById("profile_img");
 
     function shareFriends() {
       if (liff.isApiAvailable('shareTargetPicker')){
@@ -330,18 +330,18 @@
 
     liff.init({liffId}).then(() => {
       if (liff.isLoggedIn()) {
-        liff.getProfile()
-          .then(profile => {
-            const name = profile.displayName;
-            const pic = profile.pictureUrl;
-            console.log('name', name);
-            console.log('pic', pic);
-            // Name.innerHTML = name;
-            Img.src = pic;
-          })
-          .catch((err) => {
-            console.log('error', err);
-          });
+        // liff.getProfile()
+        //   .then(profile => {
+        //     const name = profile.displayName;
+        //     const pic = profile.pictureUrl;
+        //     console.log('name', name);
+        //     console.log('pic', pic);
+        //     Name.innerHTML = name;
+        //     Img.src = pic;
+        //   })
+        //   .catch((err) => {
+        //     console.log('error', err);
+        //   });
       }
       else{
         liff.login();
