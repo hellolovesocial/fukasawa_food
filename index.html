@@ -314,12 +314,12 @@
 
     function shareFriends() {
       if (liff.isApiAvailable('shareTargetPicker')){
-        const myLink = liff.permanentLink.createUrl()
-        console.log('myLink', myLink);
+        // const myLink = liff.permanentLink.createUrl()
+        // console.log('myLink', myLink);
         liff.shareTargetPicker(
           [{
             type: 'text',
-            text: '見てほしい！' + myLink
+            text: '見てほしい！　https://liff.line.me/1654261210-n9Rg63eM'
           }]
         ).then(function() {
           // window.alert('シェアしました');
